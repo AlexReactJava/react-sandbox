@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  front:
+    container_name: frontend
+    build: ./frontend
+    ports:
+        - 3000:3000
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: example
+        CHOKIDAR_USEPOLLING: "true"
+    stdin_open: true
+    command: npm start
+    restart: always
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
