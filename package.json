@@ -49,5 +49,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/farahat80/react-open-weather.git"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.14.5"
   }
 }

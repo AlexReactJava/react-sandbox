@@ -36,7 +36,6 @@ export default ()=>{
             / useEffect: {a}
             / useRef: {ref.current}
             / useReducer: {state} <button onClick={()=>{dispatchR({type:'actionA'})}}>dispatchR</button>
-            ---
             <button onClick={()=>toggleTimer()}>change</button>
         </b>
 }

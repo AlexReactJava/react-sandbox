@@ -6,13 +6,14 @@ import Timer from './timer.jsx';
 import CounterContainer from './CounterContainer.jsx';
 import { Provider } from 'react-redux';
 import store from './store/store'
-import SimpleFunc from './simpleFunction.jsx'
+import Hooks from './hooks.jsx'
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box';
+import Promises from './promises.jsx'
 
 const Sheet = React.lazy(() => import('./sheet.jsx'))
 const Firebase = React.lazy(() => import('./firebase.jsx'))
@@ -47,10 +48,11 @@ class App extends Component {
             <li><NavLink to="/sheet">Sheet</NavLink></li>
             <li><NavLink to="/counter">Counter</NavLink></li>
             <li><NavLink to="/counterRedux">CounterRedux</NavLink></li>
-            <li><NavLink to="/simpleFunc">SimpleFunc</NavLink></li>
+            <li><NavLink to="/hooks">Hooks</NavLink></li>
             <li><NavLink to="/firebase">Firebase</NavLink></li>
             <li><NavLink to="/small">Small</NavLink></li>
             <li><NavLink to="/wc">Weather</NavLink></li>
+            <li><NavLink to="/promises">Promises</NavLink></li>
             <hr/> 
             <Redirect from='/' to='/home'/> 
             <Route history={history} path='/home' component={Home} />
@@ -63,9 +65,12 @@ class App extends Component {
                <Route history={history} path='/wc' component={Weather} />
             </Suspense>
             <Route history={history} path='/counterRedux' component={CounterContainer} />
-            <Route history={history} path='/simpleFunc' component={SimpleFunc} />
+            <Route history={history} path='/hooks' component={Hooks} />
+            <Route history={history} path='/promises' component={Promises} />
           </Router>
           <CssBaseline />
+            
+          <hr />
           FOOTER
         </div>
         </Provider>
