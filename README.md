@@ -7,7 +7,8 @@
 - google scheet as a data source
 - google map
 - material ui
-- etc
+- promises
+- internationalisation
 
 # How to start:
 - npm i
