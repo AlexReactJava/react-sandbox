@@ -9,6 +9,7 @@
 - material ui
 - promises
 - internationalisation
+- typescript todo
 
 # How to start:
 - npm i

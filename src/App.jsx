@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box';
 import Promises from './promises.jsx'
 import Internationalisation from './intl.jsx'
+import TypescriptToDo from './todo.tsx/App'
 
 const Sheet = React.lazy(() => import('./sheet.jsx'))
 const Firebase = React.lazy(() => import('./firebase.jsx'))
@@ -56,6 +57,7 @@ class App extends Component {
             <li><NavLink to="/promises">Promises</NavLink></li>
             <li><NavLink to="/intl">Internationalisation EN</NavLink></li>
             <li><NavLink to="/intl/de">Internationalisation DE</NavLink></li>
+            <li><NavLink to="/tstodo">TypeScript ToDo</NavLink></li>
             <hr/> 
             <Redirect from='/' to='/home'/> 
             <Route history={history} path='/home' component={Home} />
@@ -66,6 +68,7 @@ class App extends Component {
                <Route history={history} path='/firebase' component={Firebase} />
                <Route history={history} path='/small' component={Small} />
                <Route history={history} path='/wc' component={Weather} />
+               <Route history={history} path='/tstodo' component={TypescriptToDo} />
             </Suspense>
             <Route history={history} path='/intl' component={Internationalisation} />
             <Route history={history} path='/intl/:lang' component={Internationalisation} />
